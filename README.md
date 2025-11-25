@@ -13,6 +13,8 @@ pip install -r requirements.txt
 # conda create -n dl-projets python=3.10 -y
 # conda activate dl-projets
 # pip install -r requirements.txt
+
+mamba activate deeplearning
 ````
 
 ## Démarrage

@@ -297,6 +297,8 @@ Les dimensions sont donc correctes et parfaitement compatibles avec l’architec
 **M0.**
 - **Classe majoritaire** — Métrique : `accuracy` → score = `0.5%`
 - **Prédiction aléatoire uniforme** — Métrique : `accuracy` → score = `0.5%`  
+
+![alt text](image-2.png)
 _Commentez en 2 lignes ce que ces chiffres impliquent._
 ```
 Ces scores très faibles illustrent qu’un modèle non entraîné ne peut pas dépasser 0.5% d’accuracy simplement par hasard.
