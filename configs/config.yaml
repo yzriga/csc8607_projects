@@ -3,8 +3,8 @@ dataset:
   root: "./data"
   split:
     train: 100000
-    val: 10000
-    test: 10000      # notre split artificiel val/test
+    val: 8000
+    test: 2000      # notre split artificiel val/test
   download: true
   num_workers: 4
   shuffle: true
@@ -37,15 +37,16 @@ model:
 train:
   seed: 42
   device: auto              # "cpu", "cuda", ou "auto"
-  batch_size: 64
-  epochs: 30
+  batch_size: 32
+  epochs: 40
   max_steps: null           # entier ou null
   overfit_small: false      # true pour sur-apprendre sur un petit échantillon
+  overfit_size: 32
 
   optimizer:
     name: adam              # sgd/adam/rmsprop
-    lr: 0.001
-    weight_decay: 0.0005
+    lr: 0.0001
+    weight_decay: 0.0001
     momentum: 0.9           # utile si SGD
 
   scheduler:
@@ -60,9 +61,16 @@ metrics:
   regression: []            # ex: ["mae", "rmse"]
 
 hparams:                    # espace pour mini grid search
-  lr: [0.0005, 0.001, 0.005]
+  lr: [0.0001, 0.0003, 0.0005]
   batch_size: [32, 64]
-  weight_decay: [0.0, 0.0005]
+  weight_decay: [0.00001, 0.0001]
+  blocks:
+    - [2, 2, 2]
+    - [3, 3, 3]
+
+  channels:
+    - [64, 96, 192]
+    - [64, 128, 256]
 
 paths:
   runs_dir: "./runs"
