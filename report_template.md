@@ -13,7 +13,7 @@
 - **Étudiant** : ZRIGA Yahia
 - **Projet** : `Classification Tiny ImageNet (200 classes) avec un réseau Résiduel Pré-Activation (PreAct-ResNet)`
 `(Dataset = Tiny ImageNet 64×64 via HuggingFace · Modèle = PreActResNet avec blocs résiduels pré-activation)`
-- **Dépôt Git** : _URL publique_
+- **Dépôt Git** : https://github.com/yzriga/csc8607_projects
 - **Environnement** : `python == 3.10.19`, `torch == 2.5.1`, `cuda == 12.1`, `datasets == 4.4.1`, `tensorboard == 2.20.0`, `GPU utilisé (cluster SLURM) : NVIDIA H100 NVL MIG 1g.12gb`  
 - **Commandes utilisées** :
   - Entraînement : `python -m src.train --config configs/config.yaml`
@@ -26,7 +26,7 @@
 ## 1) Données
 
 ### 1.1 Description du dataset
-- **Source** (lien) : `https://huggingface.co/datasets/zh-plus/tiny-imagenet`
+- **Source** (lien) : https://huggingface.co/datasets/zh-plus/tiny-imagenet
 - **Type d’entrée** (image / texte / audio / séries) : `Images couleur (RGB)`
 - **Tâche** (multiclasses, multi-label, régression) : `Classification multiclasses (200 classes)`
 - **Dimensions d’entrée attendues** (`meta["input_shape"]`) : `(3, 64, 64)`
